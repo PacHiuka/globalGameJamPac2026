@@ -1,0 +1,929 @@
+fileFormatVersion: 2
+guid: 8c397be0e0a19c542b4d05ca2727c8bb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4571528016259868172
+    second: Shadi_0
+  - first:
+      213: 5963097391579305165
+    second: Shadi_1
+  - first:
+      213: 8327021151599801798
+    second: Shadi_2
+  - first:
+      213: 9138944555789232124
+    second: Shadi_3
+  - first:
+      213: -4797021180103263817
+    second: Shadi_4
+  - first:
+      213: -7467992581925409386
+    second: Shadi_5
+  - first:
+      213: 676915755333508484
+    second: Shadi_6
+  - first:
+      213: -607223506888221560
+    second: Shadi_7
+  - first:
+      213: -6055642688361464977
+    second: Shadi_8
+  - first:
+      213: 5410478394879668999
+    second: Shadi_9
+  - first:
+      213: -1233826180333288034
+    second: Shadi_10
+  - first:
+      213: -3328649895431174221
+    second: Shadi_11
+  - first:
+      213: -2632965015098774235
+    second: Shadi_12
+  - first:
+      213: 1117868097434872619
+    second: Shadi_13
+  - first:
+      213: -4145326469443005952
+    second: Shadi_14
+  - first:
+      213: 8438752866352725653
+    second: Shadi_15
+  - first:
+      213: 987138769444531938
+    second: Shadi_16
+  - first:
+      213: -2124589165047227575
+    second: Shadi_17
+  - first:
+      213: -6155016922922020668
+    second: Shadi_18
+  - first:
+      213: 3507888885597370499
+    second: Shadi_19
+  - first:
+      213: -1070848292976757910
+    second: Shadi_20
+  - first:
+      213: -8618145358779933904
+    second: Shadi_21
+  - first:
+      213: -5458093018714379948
+    second: Shadi_22
+  - first:
+      213: 7182550157363493961
+    second: Shadi_23
+  - first:
+      213: -2910715184116546161
+    second: Shadi_24
+  - first:
+      213: -5024145766593762874
+    second: Shadi_25
+  - first:
+      213: 6993630976249499583
+    second: Shadi_26
+  - first:
+      213: -2230156350694120127
+    second: Shadi_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1000
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shadi_0
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 2167
+        width: 447
+        height: 887
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9951e7d7bae80c0800000000000000
+      internalID: -4571528016259868172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_1
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 2167
+        width: 442
+        height: 887
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4942adb7d21c250800000000000000
+      internalID: 5963097391579305165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_2
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 2167
+        width: 429
+        height: 887
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c535427e958f8370800000000000000
+      internalID: 8327021151599801798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_3
+      rect:
+        serializedVersion: 2
+        x: 2491
+        y: 2163
+        width: 713
+        height: 1018
+      alignment: 9
+      pivot: {x: 0.5237806, y: 0.3767459}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf7aecd37ad04de70800000000000000
+      internalID: 9138944555789232124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_4
+      rect:
+        serializedVersion: 2
+        x: 3329
+        y: 2849
+        width: 320
+        height: 332
+      alignment: 9
+      pivot: {x: 0.74373853, y: 0.20378461}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b97be307ae8d6db0800000000000000
+      internalID: -4797021180103263817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_5
+      rect:
+        serializedVersion: 2
+        x: 3671
+        y: 2851
+        width: 266
+        height: 335
+      alignment: 9
+      pivot: {x: 0.7167262, y: 0.18619184}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69d6519505c5c5890800000000000000
+      internalID: -7467992581925409386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_6
+      rect:
+        serializedVersion: 2
+        x: 4022
+        y: 2797
+        width: 186
+        height: 389
+      alignment: 9
+      pivot: {x: 0.37237483, y: 0.13385998}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48dd4830b43e46900800000000000000
+      internalID: 676915755333508484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_7
+      rect:
+        serializedVersion: 2
+        x: 4354
+        y: 2829
+        width: 208
+        height: 352
+      alignment: 9
+      pivot: {x: 0.33696336, y: 0.18207897}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88c19ac0075b297f0800000000000000
+      internalID: -607223506888221560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_8
+      rect:
+        serializedVersion: 2
+        x: 4621
+        y: 2822
+        width: 283
+        height: 364
+      alignment: 9
+      pivot: {x: 0.2603419, y: 0.22050929}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6bf5812f0906fba0800000000000000
+      internalID: -6055642688361464977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_9
+      rect:
+        serializedVersion: 2
+        x: 1986
+        y: 2167
+        width: 302
+        height: 682
+      alignment: 9
+      pivot: {x: 0.26419088, y: 0.634253}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7037ab72f61e51b40800000000000000
+      internalID: 5410478394879668999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_10
+      rect:
+        serializedVersion: 2
+        x: 3739
+        y: 2001
+        width: 696
+        height: 696
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9548a640a190eee0800000000000000
+      internalID: -1233826180333288034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1923
+        width: 285
+        height: 73
+      alignment: 9
+      pivot: {x: 0.8212666, y: 0.49999833}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b70f295e824ec1d0800000000000000
+      internalID: -3328649895431174221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_12
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1918
+        width: 273
+        height: 78
+      alignment: 9
+      pivot: {x: 0.798123, y: 0.49999842}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52da101d444d57bd0800000000000000
+      internalID: -2632965015098774235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_13
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1894
+        width: 650
+        height: 102
+      alignment: 9
+      pivot: {x: 0.9017208, y: 0.4667514}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2be855ac17738f00800000000000000
+      internalID: 1117868097434872619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_14
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1454
+        width: 454
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00253d6f987d876c0800000000000000
+      internalID: -4145326469443005952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_15
+      rect:
+        serializedVersion: 2
+        x: 2347
+        y: 1499
+        width: 247
+        height: 593
+      alignment: 9
+      pivot: {x: 0.82950383, y: 0.8316805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e734285097c1570800000000000000
+      internalID: 8438752866352725653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_16
+      rect:
+        serializedVersion: 2
+        x: 2634
+        y: 1161
+        width: 426
+        height: 933
+      alignment: 9
+      pivot: {x: 0.5, y: 0.92}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eee1c01b7503bd00800000000000000
+      internalID: 987138769444531938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_17
+      rect:
+        serializedVersion: 2
+        x: 3129
+        y: 1498
+        width: 246
+        height: 594
+      alignment: 9
+      pivot: {x: 0.19672672, y: 0.8311221}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b57b33961f382e0800000000000000
+      internalID: -2124589165047227575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_18
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 1679
+        width: 456
+        height: 124
+      alignment: 9
+      pivot: {x: 0.86439985, y: 0.49999902}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c017b228bcf49aa0800000000000000
+      internalID: -6155016922922020668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_19
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 1701
+        width: 322
+        height: 88
+      alignment: 9
+      pivot: {x: 0.8264767, y: 0.4999986}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38872991b568ea030800000000000000
+      internalID: 3507888885597370499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_20
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1699
+        width: 232
+        height: 97
+      alignment: 9
+      pivot: {x: 0.79234, y: 0.53495866}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6379c0b6259321f0800000000000000
+      internalID: -1070848292976757910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_21
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 121
+        width: 545
+        height: 1211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03b9d330572366880800000000000000
+      internalID: -8618145358779933904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_22
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 121
+        width: 388
+        height: 947
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4596d745155f044b0800000000000000
+      internalID: -5458093018714379948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_23
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 121
+        width: 298
+        height: 896
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94cb317305b8da360800000000000000
+      internalID: 7182550157363493961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_24
+      rect:
+        serializedVersion: 2
+        x: 1859
+        y: 116
+        width: 706
+        height: 574
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f85c56036ff0b97d0800000000000000
+      internalID: -2910715184116546161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_25
+      rect:
+        serializedVersion: 2
+        x: 2780
+        y: 119
+        width: 319
+        height: 849
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c9656a5b06a64ab0800000000000000
+      internalID: -5024145766593762874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_26
+      rect:
+        serializedVersion: 2
+        x: 3256
+        y: 119
+        width: 456
+        height: 715
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf058da15e5e0160800000000000000
+      internalID: 6993630976249499583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_27
+      rect:
+        serializedVersion: 2
+        x: 3781
+        y: 470
+        width: 497
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 145ab4b6d94ec01e0800000000000000
+      internalID: -2230156350694120127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_28
+      rect:
+        serializedVersion: 2
+        x: 4611
+        y: 1161
+        width: 244
+        height: 972
+      alignment: 9
+      pivot: {x: 0.5, y: 0.9081936}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b324a51235c78b4096e7a6f002ec4fa
+      internalID: 1377271671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_29
+      rect:
+        serializedVersion: 2
+        x: 4081
+        y: 1257
+        width: 168
+        height: 573
+      alignment: 9
+      pivot: {x: 0.7624076, y: 0.8728485}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fac0e5005f4d3d439c963c3254e263e
+      internalID: 1647573279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shadi_30
+      rect:
+        serializedVersion: 2
+        x: 4357
+        y: 1254
+        width: 131
+        height: 574
+      alignment: 9
+      pivot: {x: 0.24113266, y: 0.86629134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34cc849e70bf3a4782b62f22b443b2f
+      internalID: 462706992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f6facdc9b376b1640a5384c117bf9de1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Shadi_0: -4571528016259868172
+      Shadi_1: 5963097391579305165
+      Shadi_10: -1233826180333288034
+      Shadi_11: -3328649895431174221
+      Shadi_12: -2632965015098774235
+      Shadi_13: 1117868097434872619
+      Shadi_14: -4145326469443005952
+      Shadi_15: 8438752866352725653
+      Shadi_16: 987138769444531938
+      Shadi_17: -2124589165047227575
+      Shadi_18: -6155016922922020668
+      Shadi_19: 3507888885597370499
+      Shadi_2: 8327021151599801798
+      Shadi_20: -1070848292976757910
+      Shadi_21: -8618145358779933904
+      Shadi_22: -5458093018714379948
+      Shadi_23: 7182550157363493961
+      Shadi_24: -2910715184116546161
+      Shadi_25: -5024145766593762874
+      Shadi_26: 6993630976249499583
+      Shadi_27: -2230156350694120127
+      Shadi_28: 1377271671
+      Shadi_29: 1647573279
+      Shadi_3: 9138944555789232124
+      Shadi_30: 462706992
+      Shadi_4: -4797021180103263817
+      Shadi_5: -7467992581925409386
+      Shadi_6: 676915755333508484
+      Shadi_7: -607223506888221560
+      Shadi_8: -6055642688361464977
+      Shadi_9: 5410478394879668999
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
