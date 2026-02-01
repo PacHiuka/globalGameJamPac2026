@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class ShadowController : MonoBehaviour
@@ -13,6 +14,7 @@ public class ShadowController : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
+    [SerializeField] private Collider2D col2d;
 
     //Layer masks
     [SerializeField] private LayerMask groundLayer;
@@ -39,6 +41,15 @@ public class ShadowController : MonoBehaviour
     [SerializeField] private float wallSlideSpeed = 2f;
 
     [SerializeField] private Vector2 moveInput = Vector2.zero;
+
+    // Jet de masque (instance gérée par EntitiesController)
+    [SerializeField] private Vector2 throwVelocity = new Vector2(12f, 4f);
+    [SerializeField] private float throwOffset = 0.5f;
+
+    // Séquence de shot (animation 1s, tir à 0.25s)
+    private bool _controlsDisabled;
+    private const float ShotDelay = 0.25f;
+    private const float ShotAnimationDuration = 1f;
 #endregion
 
 #region Unity Functions
@@ -47,33 +58,59 @@ public class ShadowController : MonoBehaviour
     {
         if (rb == null) rb = GetComponent<Rigidbody2D>();
         if (animator == null) animator = GetComponent<Animator>();
+        if (col2d == null) col2d = GetComponent<Collider2D>();
+    }
+
+    void OnEnable()
+    {
+        moveInput = Vector2.zero;
+        if (rb == null) rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+            rb.linearVelocity = Vector2.zero;
+        if (animator == null) animator = GetComponent<Animator>();
+        if (animator != null)
+            animator.Rebind();
     }
 
     void Update()
     {
         if (rb == null) return;
         VerifyState();
-        Move();
+        if (!_controlsDisabled)
+            Move();
         SetAnimatorParameters();
     }
+
 #endregion
 
-#region accessor functions
+#region Input (appelé par EntitiesController)
 
-    public void receiveMoveInput(Vector2 moveInput)
+    public void ReceiveMove(Vector2 value)
     {
-        this.moveInput = moveInput;
+        if (_controlsDisabled) return;
+        moveInput = value;
     }
 
-    public void jumpInput()
+    public void ReceiveJump()
     {
+        if (_controlsDisabled) return;
         Jump();
     }
 
-    public void actionInput()
+    public void ReceiveAction()
     {
-        shot();
+        if (_controlsDisabled) return;
+
+        var entities = EntitiesController.Instance;
+        if (entities != null && entities.IsMaskInWorld())
+        {
+            shot(); // Récupération immédiate du masque
+            return;
+        }
+
+        StartCoroutine(ShotSequence());
     }
+
 #endregion
 
 #region Action Functions
@@ -174,9 +211,59 @@ public class ShadowController : MonoBehaviour
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 
+    private IEnumerator ShotSequence()
+    {
+        _controlsDisabled = true;
+
+        if (rb != null)
+        {
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.linearVelocity = Vector2.zero;
+        }
+        if (col2d != null) col2d.enabled = false;
+
+        SetAnimatorAttack(true);
+
+        yield return new WaitForSeconds(ShotDelay);
+
+        DoThrowMask(hideShadow: false);
+
+        yield return new WaitForSeconds(ShotAnimationDuration - ShotDelay);
+
+        SetAnimatorAttack(false);
+        _controlsDisabled = false;
+        if (col2d != null) col2d.enabled = true;
+        if (rb != null)
+            rb.bodyType = RigidbodyType2D.Dynamic;
+
+        var entities = EntitiesController.Instance;
+        if (entities != null)
+            entities.DisableShadow();
+    }
+
+    private void DoThrowMask(bool hideShadow)
+    {
+        var entities = EntitiesController.Instance;
+        if (entities == null) return;
+
+        float dir = lookRight ? 1f : -1f;
+        Vector3 spawnPos = transform.position + new Vector3(dir * throwOffset, 0f, 0f);
+        Vector2 velocity = new Vector2(throwVelocity.x * dir, throwVelocity.y);
+        entities.ThrowMask(spawnPos, velocity, hideShadow);
+    }
+
     private void shot()
     {
-        Debug.Log("shot");
+        var entities = EntitiesController.Instance;
+        if (entities == null) return;
+
+        if (entities.IsMaskInWorld())
+        {
+            entities.CatchMask();
+            return;
+        }
+
+        DoThrowMask(hideShadow: true);
     }
 #endregion
 
@@ -187,7 +274,7 @@ public class ShadowController : MonoBehaviour
         grounded = IsGrounded();
         onWallLeft = IsOnWallSide(Vector2.left);
         onWallRight = IsOnWallSide(Vector2.right);
-        onWall = onWallLeft || onWallRight;
+        onWall = grounded ? false : (onWallLeft || onWallRight);
     }
 
     private bool IsGrounded()
@@ -235,6 +322,13 @@ public class ShadowController : MonoBehaviour
         if (animator == null) return;
         animator.SetBool("Run", run);
     }
+
+    private void SetAnimatorAttack(bool attack)
+    {
+        if (animator == null) return;
+        animator.SetBool("Attack", attack);
+    }
+
 #endregion
 
 #region Debug Functions
