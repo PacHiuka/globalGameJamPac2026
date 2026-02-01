@@ -1,9 +1,5 @@
 using UnityEngine;
 
-/// <summary>
-/// Crée la caméra à partir d'un prefab, la réutilise et la fait suivre l'entité que le joueur contrôle.
-/// La cible est notifiée par EntitiesController (pas d'appel à EntitiesController chaque frame).
-/// </summary>
 public class PlayerCameraController : MonoBehaviour
 {
     [SerializeField] private GameObject cameraPrefab;
@@ -13,7 +9,6 @@ public class PlayerCameraController : MonoBehaviour
     private GameObject _cameraInstance;
     private Transform _currentTarget;
 
-    /// <summary>Appelé par EntitiesController quand l'entité contrôlée change.</summary>
     public void SetTarget(Transform target) => _currentTarget = target;
 
     void Start()

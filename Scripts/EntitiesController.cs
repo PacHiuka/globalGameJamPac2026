@@ -2,9 +2,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-/// <summary>
-/// Crée et gère les instances Masque / Ombre. Centralise les inputs et les transmet à l'entité active.
-/// </summary>
 public class EntitiesController : MonoBehaviour
 {
     public static EntitiesController Instance { get; private set; }
@@ -20,10 +17,8 @@ public class EntitiesController : MonoBehaviour
     public ShadowController GetShadow() => _shadowInstance;
     public bool IsMaskInWorld() => _maskInstance != null && _maskInstance.activeInHierarchy;
 
-    /// <summary>True si l'ombre existe et est l'entité active (visible et contrôlée).</summary>
     private bool IsShadowActive => _shadowInstance != null && _shadowInstance.gameObject.activeInHierarchy;
 
-    /// <summary>Transform de l'entité actuellement contrôlée (Shadow ou Mask), pour la caméra.</summary>
     public Transform GetCurrentTargetTransform()
     {
         if (IsShadowActive) return _shadowInstance.transform;
@@ -42,16 +37,10 @@ public class EntitiesController : MonoBehaviour
     private bool _maskInLight;
     private float _lostTimer;
 
-    /// <summary>True si le Mask est touché par la lumière (informé par LightProjector).</summary>
     public bool IsMaskInLight => _maskInLight;
 
-    /// <summary>Appelé par LightProjector chaque frame : le Mask est-il touché par la lumière.</summary>
     public void SetMaskInLight(bool inLight)
     {
-        if (inLight && !_maskInLight)
-            Debug.Log("Mask sous le soleil");
-        if (!inLight && _maskInLight)
-            Debug.Log("Mask hors du soleil");
         _maskInLight = inLight;
     }
 
@@ -96,7 +85,6 @@ public class EntitiesController : MonoBehaviour
 
     private void FindOrCreateMask()
     {
-        // Cherche un Mask en scène (active ou inactive)
         var maskController = FindFirstObjectByType<MaskController>(FindObjectsInactive.Include);
         if (maskController != null)
         {
@@ -104,38 +92,28 @@ public class EntitiesController : MonoBehaviour
             return;
         }
 
-        // Aucun Mask trouvé : on le crée depuis le prefab si disponible
         if (maskPrefab != null)
         {
             _maskInstance = Instantiate(maskPrefab);
             _maskInstance.SetActive(false);
         }
-        else
-            Debug.LogWarning("[EntitiesController] Aucun Mask en scène et pas de maskPrefab assigné.");
     }
 
     private void FindOrCreateShadow()
     {
-        // Cherche une Shadow en scène (active ou inactive)
         _shadowInstance = FindFirstObjectByType<ShadowController>(FindObjectsInactive.Include);
         if (_shadowInstance != null)
             return;
 
-        // Aucune Shadow trouvée : on la crée depuis le prefab si disponible
         if (shadowPrefab != null)
         {
             var go = Instantiate(shadowPrefab);
             _shadowInstance = go.GetComponent<ShadowController>();
             if (_shadowInstance != null)
                 go.SetActive(false);
-            else
-                Debug.LogWarning("[EntitiesController] Shadow prefab n'a pas de ShadowController.");
         }
-        else
-            Debug.LogWarning("[EntitiesController] Aucune Shadow en scène et pas de shadowPrefab assigné.");
     }
 
-    /// <summary>Lance le masque (enable). Si hideShadow, désactive l'ombre (sinon l'ombre reste pour finir son animation).</summary>
     public void ThrowMask(Vector3 position, Vector2 velocity, bool hideShadow = true)
     {
         if (_maskInstance == null) return;
@@ -152,7 +130,6 @@ public class EntitiesController : MonoBehaviour
         NotifyCameraTarget();
     }
 
-    /// <summary>Désactive l'ombre (après fin de l'animation de shot).</summary>
     public void DisableShadow()
     {
         if (_shadowInstance != null)
@@ -160,7 +137,6 @@ public class EntitiesController : MonoBehaviour
         NotifyCameraTarget();
     }
 
-    /// <summary>Récupère le masque (disable). L'ombre reste active.</summary>
     public void CatchMask()
     {
         if (_maskInstance != null)
@@ -168,7 +144,6 @@ public class EntitiesController : MonoBehaviour
         NotifyCameraTarget();
     }
 
-    /// <summary>Remplace le masque par l'ombre à la position donnée (enable shadow, disable mask).</summary>
     public void FormShadow(Vector3 position)
     {
         if (_shadowInstance == null) return;
@@ -181,7 +156,6 @@ public class EntitiesController : MonoBehaviour
         NotifyCameraTarget();
     }
 
-    /// <summary>Shadow touchée par la lumière : on la remplace par le mask à la position (sans shot).</summary>
     public void ReplaceShadowByMask(Vector3 position)
     {
         if (_maskInstance == null) return;
@@ -198,7 +172,7 @@ public class EntitiesController : MonoBehaviour
         NotifyCameraTarget();
     }
 
-#region Input (centralisé, transmis à l'entité active)
+#region Input
 
     void OnMove(InputValue value)
     {

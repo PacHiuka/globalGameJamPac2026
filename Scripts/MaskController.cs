@@ -37,11 +37,9 @@ public class MaskController : MonoBehaviour
 
         if (collision.contactCount == 0) return;
 
-        // Unity: normal pointe du point de contact VERS l'autre collider → on inverse pour avoir "vers l'extérieur"
         Vector2 normal = -collision.GetContact(0).normal;
         normal.Normalize();
 
-        // Vélocité d'AVANT la collision (celle du début de ce FixedUpdate), pas celle déjà modifiée par la physique
         Vector2 v = _velocityBeforePhysics;
         Vector2 reflected = v - 2f * Vector2.Dot(v, normal) * normal;
         _pendingBounceVelocity = reflected * firstBounceRestitution;
@@ -49,7 +47,6 @@ public class MaskController : MonoBehaviour
         _firstCollision = false;
     }
 
-    /// <summary>Appelé par EntitiesController quand le masque est l'entité active.</summary>
     public void ReceiveMove(Vector2 value) { }
 
     public void ReceiveJump() { }

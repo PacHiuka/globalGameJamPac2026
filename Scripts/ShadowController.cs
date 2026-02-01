@@ -5,7 +5,6 @@ public class ShadowController : MonoBehaviour
 {
 
 #region Variables
-    //Variables
     [SerializeField] private bool grounded;
     [SerializeField] private bool onWall;
     [SerializeField] private bool onWallLeft;
@@ -16,11 +15,9 @@ public class ShadowController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Collider2D col2d;
 
-    //Layer masks
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask wallLayer;
 
-    //Raycasts
     [SerializeField] private float groundRaycastLength;
     [SerializeField] private float groundRaycastWidth;
     [SerializeField] private float groundRaycastOffset;
@@ -31,7 +28,6 @@ public class ShadowController : MonoBehaviour
     [SerializeField] private float wallRaycastOffset;
     [SerializeField] private int wallRaycastCount;
 
-    //Movement
     [SerializeField] private float moveSpeedOnGround = 25f;
     [SerializeField] private float moveSpeedOnGroundLerp = 0.99f;
     [SerializeField] private float moveSpeedInAir = 20f;
@@ -42,11 +38,9 @@ public class ShadowController : MonoBehaviour
 
     [SerializeField] private Vector2 moveInput = Vector2.zero;
 
-    // Jet de masque (instance gérée par EntitiesController)
     [SerializeField] private Vector2 throwVelocity = new Vector2(12f, 4f);
     [SerializeField] private float throwOffset = 0.5f;
 
-    // Séquence de shot (animation 1s, tir à 0.25s)
     private bool _controlsDisabled;
     private const float ShotDelay = 0.25f;
     private const float ShotAnimationDuration = 1f;
@@ -83,7 +77,7 @@ public class ShadowController : MonoBehaviour
 
 #endregion
 
-#region Input (appelé par EntitiesController)
+#region Input
 
     public void ReceiveMove(Vector2 value)
     {
@@ -104,7 +98,7 @@ public class ShadowController : MonoBehaviour
         var entities = EntitiesController.Instance;
         if (entities != null && entities.IsMaskInWorld())
         {
-            shot(); // Récupération immédiate du masque
+            shot();
             return;
         }
 

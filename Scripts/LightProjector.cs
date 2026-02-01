@@ -1,10 +1,5 @@
 using UnityEngine;
 
-/// <summary>
-/// Accroché à une lumière : raycast vers la Shadow dans sa direction.
-/// S'il n'y a pas d'obstacle entre les deux (premier hit = Shadow), la Shadow est tuée et remplacée par le Mask.
-/// Limitation en angle de balayage : au-delà de maxAngle par rapport à forward, pas de raycast (Gizmo pour calibrer).
-/// </summary>
 public class LightProjector : MonoBehaviour
 {
     [SerializeField] private float maxDistance = 50f;
@@ -21,7 +16,6 @@ public class LightProjector : MonoBehaviour
         Vector2 origin = transform.position;
         Vector2 fwd = forward.normalized;
 
-        // Shadow : raycast vers la Shadow, si premier hit = Shadow → tuer (remplacer par Mask)
         var shadow = entities.GetShadow();
         if (shadow != null && shadow.gameObject.activeInHierarchy)
         {
@@ -36,15 +30,11 @@ public class LightProjector : MonoBehaviour
                     float castDistance = Mathf.Min(distToShadow, maxDistance);
                     RaycastHit2D hit = Physics2D.Raycast(origin, dir, castDistance);
                     if (hit.collider != null && hit.collider.GetComponentInParent<ShadowController>() != null)
-                    {
-                        Debug.Log("Shadow tuée par la lumière");
                         entities.ReplaceShadowByMask(shadow.transform.position);
-                    }
                 }
             }
         }
 
-        // Mask : raycast vers le Mask, si premier hit = Mask → informer "mask dans lumière"
         bool maskInLight = false;
         var mask = entities.GetMask();
         if (mask != null && mask.gameObject.activeInHierarchy)
@@ -72,7 +62,6 @@ public class LightProjector : MonoBehaviour
         Vector2 origin = transform.position;
         Vector2 fwd = forward.normalized;
 
-        // Cône de balayage
         float halfAngleRad = maxAngle * Mathf.Deg2Rad;
         Vector2 dirLeft = RotateVector2(fwd, halfAngleRad);
         Vector2 dirRight = RotateVector2(fwd, -halfAngleRad);
@@ -83,7 +72,6 @@ public class LightProjector : MonoBehaviour
         var entities = EntitiesController.Instance;
         if (entities == null) return;
 
-        // Raycast vers Shadow
         var shadow = entities.GetShadow();
         if (shadow != null && shadow.gameObject.activeInHierarchy)
         {
@@ -98,7 +86,6 @@ public class LightProjector : MonoBehaviour
             }
         }
 
-        // Raycast vers Mask
         if (entities.IsMaskInWorld())
         {
             var mask = entities.GetMask();
